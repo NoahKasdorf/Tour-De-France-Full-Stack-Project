@@ -1,0 +1,21 @@
+package com.project.cycling.domain;
+
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Team {
+    
+    private Long id;
+    private String name;
+    private String country;
+    private String bikeBrand;
+
+
+}
