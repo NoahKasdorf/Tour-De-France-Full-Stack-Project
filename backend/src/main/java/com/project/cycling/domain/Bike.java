@@ -1,12 +1,16 @@
 package com.project.cycling.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.*;
+import org.springframework.stereotype.Repository;
+
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Getter
+
 public class Bike {
 
     private Long id;

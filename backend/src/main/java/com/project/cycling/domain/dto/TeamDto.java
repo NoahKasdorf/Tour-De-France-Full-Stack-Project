@@ -1,33 +1,19 @@
-package com.project.cycling.domain;
+package com.project.cycling.domain.dto;
 
-
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.stereotype.Repository;
-
-import java.util.ArrayList;
-import java.util.List;
-
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Entity
-@Table(name = "teams")
-public class Team {
+public class TeamDto {
 
-    @Id
     private Long id;
-
     private String name;
-
     private String country;
-
     private String bike_brand;
-
 
 }

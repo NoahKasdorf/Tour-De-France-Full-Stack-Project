@@ -10,21 +10,11 @@ import javax.sql.DataSource;
 
 @SpringBootApplication
 @Log
-public class CyclingApplication implements CommandLineRunner {
+public class CyclingApplication {
 
-	private DataSource dataSource;
-
-	public CyclingApplication(final DataSource dataSource) {this.dataSource = dataSource;}
 
 	public static void main(String[] args) {
 		SpringApplication.run(CyclingApplication.class, args);
 	}
 
-
-	@Override
-	public void run(String... args) throws Exception {
-		log.info("Datasource: " + dataSource.toString());
-		final JdbcTemplate restTemplate = new JdbcTemplate(dataSource);
-		restTemplate.execute("select 1");
-	}
 }

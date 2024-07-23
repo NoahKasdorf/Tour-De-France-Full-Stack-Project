@@ -1,6 +1,8 @@
 package com.project.cycling.domain;
 
 import lombok.*;
+import org.springframework.stereotype.Repository;
+
 
 @Data
 @AllArgsConstructor
