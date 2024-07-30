@@ -7,6 +7,7 @@ import com.project.cycling.mappers.Mapper;
 import com.project.cycling.services.CyclistService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -31,6 +32,15 @@ public class CyclistController {
     public List<CyclistDto> listTeams(){
 
         List<CyclistEntity> cyclistEntities =  cyclistService.findAll();
+        return cyclistEntities.stream()
+                .map(cyclistMapper::mapTo)
+                .collect(Collectors.toList());
+    }
+
+    @GetMapping(path = "/cyclists/team/{teamId}")
+    @CrossOrigin(origins = "http://localhost:5173/")
+    public List<CyclistDto> listCyclistsByTeam(@PathVariable Long teamId) {
+        List<CyclistEntity> cyclistEntities = cyclistService.findByTeamId(teamId);
         return cyclistEntities.stream()
                 .map(cyclistMapper::mapTo)
                 .collect(Collectors.toList());

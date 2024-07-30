@@ -8,5 +8,6 @@ import java.util.List;
 public interface CyclistService {
 
     List<CyclistEntity> findAll();
+    List<CyclistEntity> findByTeamId(Long teamId);
 
 }

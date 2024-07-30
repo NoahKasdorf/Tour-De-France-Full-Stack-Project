@@ -27,4 +27,13 @@ public class CyclistServiceImpl implements CyclistService {
                 false)
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public List<CyclistEntity> findByTeamId(Long teamId) {
+        return StreamSupport.stream(cyclistRepository.
+                                findByTeamId(teamId).
+                                spliterator(),
+                        false)
+                .collect(Collectors.toList());
+    }
 }
