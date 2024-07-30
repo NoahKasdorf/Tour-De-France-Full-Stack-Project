@@ -1,12 +1,12 @@
 package com.project.cycling.services;
 
-import com.project.cycling.domain.Team;
+import com.project.cycling.domain.TeamEntity;
 
-public class TeamService {
+import java.util.List;
 
-    Team createTeam(Team team);
+public interface TeamService {
 
+    TeamEntity createTeam(TeamEntity teamEntity);
+
+    List<TeamEntity> findAll();
 }
-
-
-

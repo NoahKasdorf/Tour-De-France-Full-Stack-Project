@@ -6,10 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.stereotype.Repository;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 @Data
@@ -18,7 +14,7 @@ import java.util.List;
 @Builder
 @Entity
 @Table(name = "teams")
-public class Team {
+public class TeamEntity {
 
     @Id
     private Long id;

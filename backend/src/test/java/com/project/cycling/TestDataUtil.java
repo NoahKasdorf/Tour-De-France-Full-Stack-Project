@@ -1,7 +1,7 @@
 package com.project.cycling;
 
-import com.project.cycling.domain.Cyclist;
-import com.project.cycling.domain.Team;
+import com.project.cycling.domain.CyclistEntity;
+import com.project.cycling.domain.TeamEntity;
 
 public final class TestDataUtil {
 
@@ -9,44 +9,44 @@ public final class TestDataUtil {
 
     }
 
-    public static Cyclist createTestCyclistVingegaard(final Team team) {
-        return Cyclist.builder()
+    public static CyclistEntity createTestCyclistVingegaard(final TeamEntity teamEntity) {
+        return CyclistEntity.builder()
                 .id(1L)
                 .first_name("Jonas")
                 .last_name("Vingegaard")
-                .team(team)
+                .teamEntity(teamEntity)
                 .build();
     }
 
-    public static Cyclist createTestCyclistKuss(final Team team) {
-        return Cyclist.builder()
+    public static CyclistEntity createTestCyclistKuss(final TeamEntity teamEntity) {
+        return CyclistEntity.builder()
                 .id(2L)
                 .first_name("Sepp")
                 .last_name("Kuss")
-                .team(team)
+                .teamEntity(teamEntity)
                 .build();
     }
 
-    public static Cyclist createTestCyclistVanAert(final Team team) {
-        return Cyclist.builder()
+    public static CyclistEntity createTestCyclistVanAert(final TeamEntity teamEntity) {
+        return CyclistEntity.builder()
                 .id(3L)
                 .first_name("Wout")
                 .last_name("Van Aert")
-                .team(team)
+                .teamEntity(teamEntity)
                 .build();
     }
 
-    public static Cyclist createTestCyclistEvenepoel(final Team team) {
-        return Cyclist.builder()
+    public static CyclistEntity createTestCyclistEvenepoel(final TeamEntity teamEntity) {
+        return CyclistEntity.builder()
                 .id(4L)
                 .first_name("Remco")
                 .last_name("Evenepoel")
-                .team(team)
+                .teamEntity(teamEntity)
                 .build();
     }
 
-    public static Team createTestTeamVisma() {
-        return Team.builder()
+    public static TeamEntity createTestTeamVisma() {
+        return TeamEntity.builder()
                 .id(1L)
                 .name("Visma | Lease A Bike")
                 .country("Denmark")
@@ -54,12 +54,21 @@ public final class TestDataUtil {
                 .build();
     }
 
-    public static Team createTestTeamSoudal() {
-        return Team.builder()
+    public static TeamEntity createTestTeamSoudal() {
+        return TeamEntity.builder()
                 .id(2L)
                 .name("Soudal Quick-Step")
                 .country("Belgium")
                 .bike_brand("Specialized")
+                .build();
+    }
+
+    public static TeamEntity createTestTeamDecathalon() {
+        return TeamEntity.builder()
+                .id(3L)
+                .name("Decthalon AG2R")
+                .country("France")
+                .bike_brand("Van Rysel")
                 .build();
     }
 
